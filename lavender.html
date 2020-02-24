@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<title>Lavender</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway|Parisienne|Cookie|ubuntu|Signika">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/nivo-lightbox.css">
+<link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: sans-serif; color: indigo;}
+* {
+  box-sizing: border-box;
+}
+
+/* ******* step 3: box sizing */
+
+/* For mobile phones: */
+@media only screen and (max-width: 1030px) {
+  /* For tablets: */
+  .col-m-0{width: 4.165%;display: none;}
+  .col-m-1 {width: 8.33%;display: none;}
+  .col-m-15{width: 12.495%;display: none;}
+  .col-m-175{width: 14.5775%;display: none;}
+  .col-m-2 {width: 16.66%;display: none;}
+  .col-m-25{width: 20.8225%;display: none;}
+  .col-m-3 {width: 25%;display: none;}
+  .col-m-35{width: 29.165%;display: none;}
+  .col-m-4 {width: 33.33%;}
+  .col-m-5 {width: 41.66%;}
+  .col-m-6 {width: 50%;}
+  .col-m-7 {width: 58.33%;}
+  .col-m-8 {width: 66.66%;}
+  .col-m-9 {width: 75%;}
+  .col-m-10 {width: 83.33%;}
+  .col-m-11 {width: 91.66%;}
+  .col-m-12 {width: 100%;}
+  .two{width: 25%; display: block;}
+}
+
+@media only screen and (min-width: 1030px) {
+  /* For desktop: */
+  .col-0{width: 4.165%;}
+  .col-1 {width: 8.33%;}
+  .col-15{width: 12.495%;}
+  .col-175{width: 14.5775%;}
+  .col-2 {width: 16.66%;}
+  .col-25{width: 20.8225%;}
+  .col-3 {width: 25%;}
+  .col-35{width: 29.165%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  .two1{display: none;}
+}
+  .submitbutton{
+    background-color: green;
+    color: white;
+    border-radius: 8px;
+    border-width: 0px;
+    width: 100px;
+    font-size: 15px;
+    font-family: 'Signika', sans-serif;
+  }
+
+/* ******* step 4: clear both */
+[class*="col-"] {
+  float: right;
+  padding-top: 20px;
+}
+
+/* ******* step 5: clear both */
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+  .menu-position{
+    position: fixed;
+    display: block;
+    z-index: 99;
+    width: 100%;
+    background-color:black;
+  }
+.container {
+  width: 200px;
+  clear: both;
+}
+
+.container input {
+  width: 200px;
+  clear: both;
+}
+#footer {
+  background: #333;
+  padding: 30px 0 20px;
+}
+#footer h3 {
+  color: #1e7a46;
+  font-weight: 400;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+#footer .social {
+  margin: 10px 0 50px 0;
+}
+#footer .social ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+#footer .social i.fa {
+  font-size: 22px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  background: #444;
+  color: #6aaf08;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+#footer .social i.fa:hover {
+  background: #6aaf08;
+  color: #fff;
+}
+#footer p {
+  color: #666;
+  font-size: 15px;
+}
+#footer a {
+  color: #888;
+}
+#footer a:hover {
+  color: #ccc;
+}
+
+  .menu{
+    background-color: black;
+    color: white;
+    float: left; 
+    margin: 0px;
+    text-align: center;
+    font-family: Signika;
+    font-size: 15px;
+    border-left-color: white ;
+    border-left-width: 2px;
+    border-left-style: solid;
+
+  }
+  .menu:hover{
+    color: green;
+  }
+  .two:hover {background-color: black;}
+
+  .dropdown:hover {background-color: indigo;}
+  .footer2{
+    background-color: #141414;
+    text-align: center;
+    color: white;
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+    width: 100%
+    height: 50px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transform: translate(-20% 0%);
+    margin-top: 0px;
+  }
+.dropbtn {
+    color: white;
+    background-color: black;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    background-color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;color: indigo;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: indigo;}
+</style>
+
+<body class="w3-white" style="background-image:url(http://rebeckarasmussen.se.formecdn.com/static/tumblr-lileedxsw31qzbrv5.png);background-repeat: repeat;">
+  <div class="menu-position" style="padding-left: 0px;" align="left;">
+    <div align="left" style="margin-left:-60px;padding-left: 0px;">
+    <div class="menu two two1" style="border-left-style: none; float: left;padding-top: 13px;margin-right: 0px;padding-right: 0px;margin-left: -30px;padding-left: 0px;"><img src="https://78.media.tumblr.com/3c24f2f34a0009ccad27dfbf5c3321d3/tumblr_mpjrgjDVov1r0sn0fo1_500.png" width="40" height="40" align="right"></div>
+    <div class="menu two two1" style="border-left-style: none;float: left;text-align: left; vertical-align: center;padding-top: 15px;margin-left: 0px;padding-left: 0px;"><h3 style="font-family: ubuntu ;color: white;display: inline; padding-bottom: 4px;">Plant </h3><h3 style="font-family: ubuntu ;color: blue; font-style: bold;display: inline; padding-bottom: 04px;">Planet</h3></div></div>
+    <div class="menu col-1 col-m-1 col-n-2" style="border-left-style: none; float: left;padding-left: 0px;padding-top: 0px;"><b ><img src="https://78.media.tumblr.com/3c24f2f34a0009ccad27dfbf5c3321d3/tumblr_mpjrgjDVov1r0sn0fo1_500.png" width="45" height="45" align="center"></b></div>
+    <div class="menu col-1 col-m-1 col-n-2" style="border-left-style: none;padding-left: 0px;"><b style="width: 100%;border-left-style: none;padding-left: 0px;"><a href="file:///C:/Users/A%20S%20Computer/Desktop/Website%20(1)/Website/HomePage.html"style="text-decoration: none; color: white;">HOME</a></b></div>
+<div class="menu col-15 col-m-15 col-n-2"><b style="width: 100%;"><a href="file:///C:/Users/A%20S%20Computer/Desktop/Website%20(1)/Website/plantsMain.html"style="text-decoration: none; color: white;">PLANTS</a></b></div> 
+  <div class="menu col-25 col-m-25 col-n-5"><b style="width: 100%;">SEASONAL PICKS</b></div>
+          <div class="menu col-1 col-m-1 col-n-15"><b style="width: 100%;"><a href="file:///C:/Users/A%20S%20Computer/Desktop/Website%20(1)/Website/ToolPage.html"style="text-decoration: none; color: white;">TOOLS</a></b></div>
+  <div class="menu col-1 col-m-1 col-n-15"><b style="width: 100%;"><a href="file:///C:/Users/A%20S%20Computer/Desktop/Website%20(1)/Website/TipsPage.html" style="text-decoration: none; color: white;">TIPS</a></b></div>
+ <div class="menu col-15 col-m-15 col-n-3"><b style="width: 100%;">NURSERIES</b></div>
+
+    <div class="menu col-1 col-m-1 col-n-3"><b style="width: 100%;"><a href="file:///C:/Users/A%20S%20Computer/Desktop/Website%20(1)/Website/Sign%20In.html"style="text-decoration: none; color: white;">CONTACT</a></b></div>
+  <div class="menu col-15 col-m-15 col-n-3"  ><b style="width: 100%;"><a href="file:///C:/Users/A%20S%20Computer/Desktop/Website%20(1)/Website/SignUpForm.html"style="text-decoration: none; color: white;">SIGN UP</a></b></div>
+   <div class="menu two two1 dropdown" style="float: right;border-left-style: none;margin-right:0px;padding-top: 0px;"><button class="dropbtn  two two1 two2"><img src="https://21thirteen.com/wp-content/uploads/2016/03/hamburger-menu.jpg" width="40" height="40" align="left"></button>
+  <div class="dropdown-content">
+    <a href="#">HOME</a>
+    <a href="#">PLANTS</a>
+    <a href="#">SEASONAL PICKS</a>
+    <a href="#">TOOLS</a>
+    <a href="#">TIPS</a>
+    <a href="#">PLANTS</a>
+    <a href="#">NURSERIES</a>
+    <a href="#">CONTACT</a>
+
+
+  </div>
+</div>
+<div class="menu two two1" style="border-left-style: none; float: right;padding-top: 17px;padding-bottom: 0px;"><a href="#"><div style="float: right;padding-right: 22px;" ><img src="https://openclipart.org/image/2400px/svg_to_png/247320/abstract-user-flat-4.png" width="30"  style="background-color: black;border-radius:50%;border: 1px solid white;"></div><br><div style="clear: right; float: right;"><a href="#">Sign-Up</a></div></a></div>
+</div>
+  <div style="clear: right; clear: left;"></div>
+  <br>
+  <br>
+   <br>
+  <br>
+
+<header class="w3-container w3-center w3-padding-35"> 
+  <h1><b style=font-size: 80px;background-color: indigo; color:yellow">Product type: Lavender </b></h1>
+</header>
+<div class="w3-row">
+<div class="w3-col l8 s12">
+  <div class="w3-card-4 w3-margin w3-white">
+    <div class="w3-container w3-padding" style="background-color:indigo;">
+      <h2 style="color: yellow; font-family: serif;">Lavender:</h2>
+    </div>
+    <img src="https://www.rareseeds.com/assets/1/14/DimLarge/Herb-Flower-Lavender-LSS-000_3807.jpg" alt="Nature" style="width:100%;height:30%">
+    <div class="w3-container" style="background-color: indigo">
+      <h3 style="color: yellow"><b>Product Description</b></h3>
+      <h5 style="color: yellow">Last Modified, <span class="w3-opacity" >October 27, 2018</span></h5>
+    </div>
+    <div class="w3-container">
+      <p style="color: indigo; ">
+      <h2><b>Description:</b></h2><br>
+    Lavender is a genus of 47 known species of flowering plants in the mint family, Lamiaceae. It is native to the Old World and is found from Cape Verde and the Canary Islands, Europe across to northern and eastern Africa, the Mediterranean, southwest Asia, China (Plectranthus mona lavender) to southeast India. Many members of the genus are cultivated extensively in temperate climates as ornamental plants for garden and landscape use, for use as culinary herbs, and also commercially for the extraction of essential oils.The most widely cultivated species, Lavandula angustifolia, is often referred to as lavender, and there is a color named for the shade of the flowers of this species.
+    </p>
+    <p style="color: indigo; ">
+      <h2><b>Cultivation:</b></h2><br>
+    The most common form in cultivation is the common or English lavender Lavandula angustifolia (formerly named L. officinalis). A wide range of cultivars can be found. Other commonly grown ornamental species are L. stoechas, L. dentata, and L. multifida (Egyptian lavender).
+
+Because the cultivated forms are planted in gardens worldwide, they are occasionally found growing wild as garden escapes, well beyond their natural range. Such spontaneous growth is usually harmless, but in some cases Lavandula species have become invasive. For example, in Australia, Lavandula stoechas has become a cause for concern; it occurs widely throughout the continent, and has been declared a noxious weed in Victoria since 1920. It also is regarded as a weed in parts of Spain.
+
+Lavenders flourish best in dry, well-drained, sandy or gravelly soils in full sun. All types need little or no fertilizer and good air circulation. In areas of high humidity, root rot due to fungus infection can be a problem. Organic mulches can trap moisture around the plants' bases, encouraging root rot. Gravelly materials such as crushed rocks give better results. It grows best in soils with a pH between 6 and 8.
+
+Most lavender is hand-harvested, and harvest times vary depending on intended use.
+
+    </p>
+
+<p style="color: indigo; ">
+      <h2><b>Lavender Oil:</b></h2><br>
+    Commercially, the plant is grown mainly for the production of essential oil of lavender. This has antiseptic[16][17] and anti-inflammatory[18] properties, and can be used as a natural mosquito repellent.[19] These extracts are also used as fragrances for bath products.
+
+English lavender (Lavandula angustifolia) yields an essential oil with sweet overtones, and can be used in balms, salves, perfumes, cosmetics, and topical applications. Lavandin, Lavandula × intermedia (also known as Dutch lavender), yields a similar essential oil, but with higher levels of terpenes including camphor, which add a sharper overtone to the fragrance.
+
+The lavandins Lavandula × intermedia are a class of hybrids of L. angustifolia and L. latifolia.[20] The lavandins are widely cultivated for commercial use, since their flowers tend to be bigger than those of English lavender and the plants tend to be easier to harvest, but lavandin oil is regarded by some to be of a lower quality than that of English lavender, with a perfume less sweet.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border" style="color: green"><b>Edit</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Views </b> <span class="w3-tag">10</span></span></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white" align="center">
+        <div class="w3-row">
+      </div>
+
+  </div>
+
+</div>
+<div class="w3-col l4">
+  
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding" style="background-color:indigo;">
+      <h4 style="color: yellow">Popular Product Purchases</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="https://www.fiftyflowers.com/site_files/FiftyFlowers/Image/Product/Wellington-Carnation-Head-150_d555076d.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Carnation</span><br>
+        <span>2310 purchases</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="http://tatflowers.ru/750/roza-40-sm-35-sht.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Roses</span><br>
+        <span>1920 purchases</span>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="https://www.colourbox.dk/preview/3062373-flot-lyseroed-lilje-isoleret-paa-hvid-baggrund.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Lily</span><br>
+        <span>1593 purchases</span>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="https://us.123rf.com/450wm/flower4/flower41705/flower4170500020/77571280-purple-and-yellow-flowers-pansy-isolated-on-white-background-flat-lay-top-view.jpg?ver=6" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Pansy</span><br>
+        <span>923 purchases</span>
+      </li>  
+    </ul>
+  </div>
+  <hr> 
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding" 
+    style="background-color: indigo">
+
+      <h4 style="color: #e9ed0b">Tags For This Article</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom">Lavender</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">flowers</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Purple Flowers</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Spring</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom"></span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Summer</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">garden</span><span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Lavendar Oil</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Outdoor</span>
+    </p>
+    </div>
+  </div>
+</div>
+</div><br>
+</div>
+<footer class="w3-container w3-white w3-padding-32 w3-margin-top" style="background-color: #e9ed0b">
+  <div class="container"> 
+    <button class="w3-button w3-black w3-padding-large w3-margin-bottom" id="addText" class="btn">Add To Cart ($29.99)</button> 
+    <button class="w3-button w3-black w3-padding-large w3-margin-bottom" id="undo" class="btn">Remove From Cart</button> 
+  </div> 
+<div>
+      <pre style="max-width: 100%"><p id="text"></p></pre>
+      
+</div>
+
+ 
+
+</footer>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+  <script type="text/javascript">     
+var CommandManager = (function() {   
+  function CommandManager() {} 
+  CommandManager.executed = []; 
+  CommandManager.unexecuted = []; 
+  CommandManager.execute = function execute(cmd) {     
+    cmd.execute(); 
+    CommandManager.executed.push(cmd); 
+  }; 
+  CommandManager.undo = function undo() {     
+var cmd1=CommandManager.executed.pop();     
+if (cmd1 !== undefined){      
+ if (cmd1.unexecute !== undefined){         
+       cmd1.unexecute(); 
+      } 
+      CommandManager.unexecuted.push(cmd1); 
+    }  
+ };  
+return CommandManager; 
+})(); 
+var $i=1; 
+    $("#addText").click(function(){         
+               CommandManager.execute({           
+                     execute: function(){ 
+                        $("#text").append("\nThis item has been added to your cart successfully!").append("("+$i+")"); 
+                        ++$i;           
+         },           
+ unexecute: function(){             
+     var arr = $("#text").html().split("\n");             
+     var html = arr.slice(0,arr.length-1).join("\n"); 
+     $("#text").html(html); 
+          } 
+        }); 
+    }); 
+    $("#undo").click(function(){ 
+      CommandManager.undo(); 
+    }); 
+  </script> 
+
+<div id="footer" class="container text-center col-md-8" style="background-color: black; width: 100%; background-attachment: fixed;">
+  <center>
+  <div style="clear:right;color: white;"><caption>&copy;2018 PlantPlanet. All rights reserved</caption></div>
+</center>
+<form><center><h1 style="color: gray;">DROP US A MESSAGE</h1>
+  <div class="container" style="color: gray;">
+      
+First Name:<br><input type="text" name="t1"><br><br>
+              Last Name:<br><input type="text" name="t2"/><br><br>
+              Email Address:<sup>*</sup><input type="Email" name="e1" placeholder="required"/><br><br>
+              Message:<br><input type="text" name="t2"><br><br>
+  
+<input type="submit" name="b1" value="Send Message" class="submitbutton"> </div> </div></center></form>
+   
+  
+
+</body>
+</html>
