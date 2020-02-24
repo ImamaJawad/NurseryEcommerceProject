@@ -9,6 +9,11 @@
 4)go to localhost/webProject/HomePage.php
 
 5)For testing sessions use of different users, use username and password:
-   -> username: 1        password: r    for retailer.
-   -> username: a        no password    for customer.
-   -> username: A1       password: A1   for administrator.
+   -> username: 1        
+   -> password: r   for retailer.
+   
+   -> username: a
+   -> no password   for customer.
+   
+   -> username: A1
+   -> password: A1  for administrator.
