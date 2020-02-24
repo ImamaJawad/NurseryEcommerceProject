@@ -9,6 +9,7 @@
 4)go to localhost/webProject/HomePage.php
 
 5)For testing sessions use of different users, use username and password:
+
    -> username: 1        
    -> password: r   for retailer.
    
