@@ -1,0 +1,15 @@
+
+.button {
+    border-radius: 25px;
+    padding: 10px; 
+    width: 150px; 
+    text-shadow: 2px;
+    color: white;
+    text-shadow: -1px 0   black, 
+                   0   1px black,  
+                   1px 0   black, 
+                  0  -1px black;
+
+    font-style:bold;
+}
+
